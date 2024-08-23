@@ -1,0 +1,311 @@
+<!doctype html>
+
+<html lang="fa-IR" dir="rtl" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO_DO Landing</title>
+    <link rel="icon" type="image/x-icon" href="https://icongr.am/devicon/slack-original.svg?size=54&color=currentColor">
+
+    <link rel="stylesheet" href="./styles/app.css">
+
+    <script type="text/javascript">
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+    </script>
+
+</head>
+
+<body class="dark:bg-[#040810] bg-white">
+
+<!--creat header-->
+<header class="header">
+
+    <section class="header_top flex justify-between items-center py-8 px-16">
+
+        <nav class="navbar flex items-center gap-10">
+
+            <h2 class="nav_logo__txt font-semibold dark:text-white text-[#141414] text-[20px] leading-[30px]">کوئرا
+                لیست</h2>
+
+            <ul class="menu_X  text-base font-semibold flex items-center gap-10">
+                <li class="menu__item dark:text-[#CFCFCF] text-[#666666]">
+                    <a href="index.html" class="menu__link">صفحه اصلی</a>
+                </li>
+                <li class="menu__item dark:text-[#3A86F8] text-[#2C7EF8]">
+                    <a href="#" class="menu__link">درباره ما</a>
+                </li>
+                <li class="menu__item dark:text-[#CFCFCF] text-[#666666]">
+                    <a href="contact.html" class="menu__link">ارتباط با ما</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="h_icon w-6 h-6 cursor-pointer hidden" onclick="toggleMenu()">
+
+            <div class="hamburger_menu w-full hidden">☰</div>
+
+            <div class="">
+
+                <ul class="H-menu text-[12px] font-normal items-center py-4 px-4 pl-16  mt-2 ">
+
+                    <li class="py-1 text-center">
+                        <a href="index.html" class="block">صفحه اصلی</a>
+                    </li>
+
+                    <div class="line h-px w-14 bg-[#293242] mx-auto"></div>
+
+                    <li class="py-1 text-center text-blue-500">
+                        <a href="#" class="block">درباره ما</a>
+                    </li>
+
+                    <div class="line h-px w-14 bg-[#293242] mx-auto"></div>
+
+                    <li class="py-1 text-center">
+                        <a href="contact.html" class="block">ارتباط باما</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="header_left flex items-center gap-4">
+
+            <div class="header_btn__right rounded-md py-2 px-6 gap-2 bg-[#3A86F8] w-[167px] h-10 text-center">
+                <a href="#" class="text-white text-center font-semibold text-[16px] w-[119px] h-2.5">ورود به
+                    اپلیکیشن</a>
+            </div>
+
+            <div class="mode_them cursor-pointer" id="toggle-theme">
+                <img src="./images/d-btn-header.svg" alt="" class="mode-logo__imag block dark:hidden">
+                <img src="./images/sunmood.svg" alt="" class="mode-logo__imag  hidden dark:block">
+            </div>
+
+        </div>
+
+    </section>
+
+</header>
+
+<!--creat main abut us-->
+<main class="main_about__desktop text-[#E6E6E6] ">
+
+    <section class="contents-about flex gap-6 justify-evenly py-10 px-8 my-0 mx-auto w-[1120px] h-[686px]">
+
+        <div class="contents_right flex flex-col gap-6 py-8 px-10 rounded-3xl dark:bg-[#0B192D] bg-white w-[548px] border dark:border-[#0B192D] border-[#F5F6F8]">
+            <h2 class="title__about font-bold text-[40px] dark:text-[#E6E6E6] text-[#070D31]">درباره‌ من</h2>
+            <h2 class="subtitle__about font-normal text-[32px] dark:text-[#B5B5B5] text-[#575757]">محمد محمدی</h2>
+            <p class="paragraph__abut font-normal text-lg dark:text-[#E6E6E6] text-[#444749]">کاربران اندروید می‌توانند اپلیکیشن کوئرالیست
+                را از استورهای معتبر اندروید دانلود
+                نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر
+                وب آن استفاده نمایند.
+                <br>
+                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران
+                سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+                <br>
+                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران
+                سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+            </p>
+        </div>
+
+        <div class="contents_left  flex-col flex gap-6">
+
+            <div class="contents_left__top">
+                <figure class="">
+                    <img src="./images/about.svg" alt="imag_about__me">
+                </figure>
+            </div>
+
+            <div class="about-boxes flex flex-col justify-evenly content-center rounded-3xl dark:bg-[#0B192D] bg-white border dark:border-[#0B192D] border-[#F5F6F8] h-[312px]">
+
+                <div class="row1-boxes flex gap-6 justify-center my-0 mx-auto">
+                    <div class="about__box1 flex-col flex gap-6 rounded-2xl dark:bg-[#0E1E34] bg-[#F9FAFB] border dark:border-[#0E1E34] border-[#F5F5F5]  w-[230px] h-[112px]">
+                        <h3 class="about__title font-semibold dark:text-[#E6E6E6] text-[#070D31] text-[32px] pt-2 pr-8">1397</h3>
+                        <h3 class="about__subtitle font-normal text-lg dark:text-[#ACACAC] text-[#070D31] pr-8">سال تولد</h3>
+                    </div>
+                    <div class="about__box2 flex-col flex  gap-6 rounded-2xl dark:bg-[#0E1E34] bg-[#F9FAFB] border dark:border-[#0E1E34] border-[#F5F5F5] w-[230px] h-[112px]">
+                        <h3 class="about__title font-semibold dark:text-[#E6E6E6] text-[#070D31] text-[32px] pt-2 pr-8 ">تهران</h3>
+                        <h3 class="about__subtitle font-normal text-lg dark:text-[#ACACAC] text-[#070D31] pr-8">محل زندگی</h3>
+                    </div>
+                </div>
+
+                <div class="row2-boxes flex gap-6 justify-center my-0 mx-auto">
+                    <div class="about__box3 flex-col flex gap-6 rounded-2xl dark:bg-[#0E1E34] bg-[#F9FAFB] border dark:border-[#0E1E34] border-[#F5F5F5] w-[230px] h-[112px]">
+                        <h3 class="about__title font-semibold dark:text-[#E6E6E6] text-[#070D31] text-[32px] pt-2 pr-8">3.5</h3>
+                        <h3 class="about__subtitle font-normal text-lg dark:text-[#ACACAC] text-[#070D31] pr-8">سال تجربه کار</h3>
+                    </div>
+                    <div class="about__box4 flex-col flex gap-6 rounded-2xl dark:bg-[#0E1E34] bg-[#F9FAFB] border dark:border-[#0E1E34] border-[#F5F5F5] w-[230px] h-[112px]">
+                        <h3 class="about__title font-semibold dark:text-[#E6E6E6] text-[#070D31] text-[32px] pt-2 pr-8">10+</h3>
+                        <h3 class="about__subtitle font-normal text-lg dark:text-[#ACACAC] text-[#070D31] pr-8">مشارکت در پروژه</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<main class="main_about__mobile text-[#E6E6E6] hidden">
+
+    <section class="contents-about flex flex-col gap-4 justify-center items-center my-0 mx-auto">
+
+        <div class="contents_top">
+            <figure class="">
+                <img src="./images/about-re-im.svg" alt="imag_about__me">
+            </figure>
+        </div>
+
+        <div class="contents_top__txt flex flex-col gap-4 justify-center items-center">
+            <h2 class="title__about font-bold text-[24px] text-white text-center">درباره‌ من</h2>
+            <h2 class="subtitle__about font-black text-[28px] text-white text-center">محمد محمدی</h2>
+        </div>
+
+        <div class="contents_main__para flex flex-col gap-4 p-4 rounded-2xl bg-[#0B192D] border border-[#0B192D] w-[328px] h-[392px]">
+            <p class="paragraph__abut font-normal text-[12px] text-[#E6E6E6] text-center leading-[30px]">کاربران اندروید
+                می‌توانند اپلیکیشن کوئرالیست
+                را از استورهای معتبر اندروید دانلود
+                نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر
+                وب آن استفاده نمایند.
+                <br>
+                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران
+                سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+                <br>
+                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید دانلود نمایند. همچنین کاربران
+                سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند.
+            </p>
+        </div>
+
+        <div class="contents_bottom  flex-col flex ">
+
+            <div class="about-boxes flex flex-col gap-2.5 justify-center content-center h-[312px]">
+
+                <div class="row1-boxes flex gap-2.5 justify-center my-0 mx-auto">
+                    <div class="about__box1 flex-col flex gap-6 rounded-2xl bg-[#0E1E34] border border-[#0E1E34] w-[156px] h-[90px]">
+                        <h3 class="about__title font-bold text-[#E6E6E6] text-[18px] pt-2 pr-8">1397</h3>
+                        <h3 class="about__subtitle font-normal text-[12px] text-[#ACACAC] pr-8">سال تولد</h3>
+                    </div>
+                    <div class="about__box2 flex-col flex  gap-6 rounded-2xl bg-[#0E1E34] border border-[#0E1E34] w-[156px] h-[90px]">
+                        <h3 class="about__title font-bold text-[#E6E6E6] text-[18px] pt-2 pr-8 ">تهران</h3>
+                        <h3 class="about__subtitle font-normal text-[12px] text-[#ACACAC] pr-8">محل زندگی</h3>
+                    </div>
+                </div>
+
+                <div class="row2-boxes flex gap-2.5 justify-center my-0 mx-auto">
+                    <div class="about__box3 flex-col flex gap-6 rounded-2xl bg-[#0E1E34] border border-[#0E1E34] w-[156px] h-[90px]">
+                        <h3 class="about__title font-semibold text-[#E6E6E6] text-[18px] pt-2 pr-8">3.5</h3>
+                        <h3 class="about__subtitle font-normal text-[12px] text-[#ACACAC] pr-8">سال تجربه کار</h3>
+                    </div>
+                    <div class="about__box4 flex-col flex gap-6 rounded-2xl bg-[#0E1E34] border border-[#0E1E34] w-[156px] h-[90px]">
+                        <h3 class="about__title font-semibold text-[#E6E6E6] text-[18px] pt-2 pr-8">10+</h3>
+                        <h3 class="about__subtitle font-normal text-[12px] text-[#ACACAC] pr-8">مشارکت در پروژه</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!--creat footer-->
+
+<footer class="footer flex flex-col gap-12 ">
+
+    <section class="footer-top flex justify-center items-center gap-3 pt-9">
+        <div class="dark:bg-[#E9E9E9] bg-[#AFAFAF] w-64 h-[1px]"></div>
+        <span class="dark:text-white text-[#141414] font-semibold text-base">کوئرا لیست</span>
+        <div class="dark:bg-[#E9E9E9] bg-[#AFAFAF] w-64 h-[1px]"></div>
+    </section>
+
+    <section class="footer-main flex justify-between py-0 px-40">
+
+        <div class="footer-main__right flex flex-col gap-6 dark:text-[#DFDFDF] text-[#242424]">
+
+            <div class="footer_item__right1_2 flex flex-col gap-4">
+
+                <div class="footer-item__right1 flex items-center gap-4">
+
+                    <img src="./images/fax-d.svg" alt="logo-fax" class="main-img__fax hidden dark:block">
+                    <img src="./images/fax-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+                    <img src="./images/facx-r.svg" alt="logo-fax" class="main-img__fax__res hidden">
+
+                    <span class="fax-txt">فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
+
+                </div>
+
+                <div class="footer-item__right2 flex items-center gap-4">
+
+                    <img src="./images/call-d-f.svg" alt="logo-phone" class="main-img__phone hidden dark:block">
+                    <img src="./images/call-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+                    <img src="./images/call-r.svg" alt="logo-phone" class="main-img__phone__res hidden">
+
+                    <span class="phone-txt">تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
+                </div>
+
+            </div>
+
+            <div class="footer-item__right3 flex items-center gap-4">
+
+                <img src="./images/location-d.svg" alt="logo-loc" class="main-img__loc hidden dark:block">
+                <img src="./images/location-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+
+                <span class="loc-txt">آدرس دفتر مرکزی: پونک - خیابان اشرفی <br> اصفهانی - خیابان صبحدل- بن‌بست شب بو</span>
+
+            </div>
+
+        </div>
+
+        <div class="footer-main__left flex flex-col gap-8 dark:text-[#DFDFDF] text-[#242424]">
+
+            <h4 class="footer-main__txt font-bold text-base">با ما در ارتباط باش</h4>
+            <p class="footer-main__pra font-normal text-base">اگه میخوای اولین نفری باشی که از فیچرهای جدید <br>و
+                تخفیفات با خبر بشی.</p>
+
+            <div class="footer-email flex justify-between items-center border border-[#A1A1A1] rounded-lg w-84 h-12 dark:bg-[#040810] bg-white">
+
+                <label>
+                    <input type="email" placeholder="ایمیل"
+                           class="footer_email__input border-[#A1A1A1] dark:bg-[#040810] bg-white pr-4 outline-none border-none ">
+                </label>
+
+                <button class="send_email__btn flex justify-center items-center outline-none border-none">
+                    <img src="./images/send.svg" alt="icon_send" class="pl-2">
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer-bottom flex justify-center pb-4">
+        <div class="copyright">
+            <p class="copyright__text dark:text-[#DFDFDF] text-[#666666] font-normal text-sm">تمامی حقوق مادی و معنوی
+                این سایت متعلق به
+                کوئرا لیست
+                می‌باشد.</p>
+        </div>
+    </section>
+
+</footer>
+
+<script src="./scripts/app.js"></script>
+
+
+</body>
+
+</html>

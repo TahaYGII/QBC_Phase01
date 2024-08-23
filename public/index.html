@@ -1,0 +1,577 @@
+<!doctype html>
+
+<html lang="fa-IR" dir="rtl" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO_DO Landing</title>
+    <link rel="icon" type="image/x-icon" href="https://icongr.am/devicon/slack-original.svg?size=54&color=currentColor">
+
+    <link rel="stylesheet" href="./styles/app.css">
+
+    <script type="text/javascript">
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+    </script>
+
+</head>
+
+<body class="dark:bg-[#040810] bg-white relative">
+
+<!--<div class="gradient-div1"></div>-->
+<!--<div class="gradient-div2"></div>-->
+<!--<div class="gradient-div3"></div>-->
+<!--<div class="gradient-div4"></div>-->
+<!--<div class="gradient-div5"></div>-->
+<!--<div class="gradient-div6"></div>-->
+
+<!--creat header-->
+<header class="header">
+
+    <section class="header_top flex justify-between items-center py-8 px-16">
+
+        <nav class="navbar flex items-center gap-10">
+
+            <h2 class="nav_logo__txt font-semibold dark:text-white text-[#141414] text-[20px] leading-[30px]">کوئرا
+                لیست</h2>
+
+            <ul class="menu_X  text-base font-semibold flex items-center gap-10">
+                <li class="menu__item dark:text-[#3A86F8] text-[#2C7EF8]">
+                    <a href="#" class="menu__link">صفحه اصلی</a>
+                </li>
+                <li class="menu__item dark:text-[#CFCFCF] text-[#666666]">
+                    <a href="about.html" class="menu__link">درباره ما</a>
+                </li>
+                <li class="menu__item dark:text-[#CFCFCF] text-[#666666]">
+                    <a href="contact.html" class="menu__link">ارتباط با ما</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="h_icon w-6 h-6 cursor-pointer hidden" onclick="toggleMenu()">
+
+            <div class="hamburger_menu w-full hidden">☰</div>
+
+            <div class="">
+
+                <ul class="H-menu text-[12px] font-normal items-center py-4 px-4 pl-16  mt-2 ">
+
+                    <li class="py-1 text-center text-blue-500">
+                        <a href="#" class="block">صفحه اصلی</a>
+                    </li>
+
+                    <div class="line h-px w-14 bg-[#293242] mx-auto"></div>
+
+                    <li class="py-1 text-center">
+                        <a href="about.html" class="block">درباره ما</a>
+                    </li>
+
+                    <div class="line h-px w-14 bg-[#293242] mx-auto"></div>
+
+                    <li class="py-1 text-center">
+                        <a href="contact.html" class="block">ارتباط باما</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="header_left flex items-center gap-4">
+
+            <div class="header_btn__right rounded-md py-2 px-6 gap-2 bg-[#3A86F8] w-[167px] h-10 text-center">
+                <a href="#" class="text-white text-center font-semibold text-[16px] w-[119px] h-2.5">ورود به
+                    اپلیکیشن</a>
+            </div>
+
+            <div class="mode_them cursor-pointer" id="toggle-theme">
+                <img src="./images/d-btn-header.svg" alt="" class="mode-logo__imag block dark:hidden">
+                <img src="./images/sunmood.svg" alt="" class="mode-logo__imag  hidden dark:block">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--creat header bottom-->
+    <section class="header_bottom flex flex-col justify-center items-center bg-gradient-to-b from-[#0267FF40] to-[#1A202C00] relative ">
+
+        <div class="stars absolute w-full h-full  top-0 left-0">
+
+            <div class="star1 pt-16 pr-64">
+                <img src="images/str-d.svg" alt="str-bg" class="star1-img  hidden dark:block">
+                <img src="images/str-light.svg" alt="str-bg" class="star1-img block dark:hidden">
+            </div>
+
+            <div class="star2 pt-40 pr-[1100px]">
+                <img src="images/str-d.svg" alt="str-bg" class="star2-img  hidden dark:block">
+                <img src="images/str-light.svg" alt="str-bg" class="star2-img block dark:hidden">
+            </div>
+
+        </div>
+
+        <div class="header_bottom__txt pt-7 dark:text-white text-[#141414]">
+            <p class="header_title dark:text-white text-[#141414] font-normal text-center text-[44.8px]">تمرکز رو وارد
+                زندگیت کن</p>
+            <h1 class="header_subtitle dark:text-white text-[#141414] text-center font-black text-[64px] ">به سمت اهدافت
+                اوج بگیر</h1>
+        </div>
+
+        <div class="header_bottom__logo">
+            <figure>
+                <img src="./images/line.svg" alt="" class="logo_baseline">
+                <img src="./images/line-res.svg" alt="" class="logo_baseline__res hidden">
+
+            </figure>
+        </div>
+
+        <div class="header_bottom__pra py-8 flex flex-col h-[62px] w-[827px] gap-4 items-center justify-evenly">
+
+            <span class="paragraph_text dark:text-white text-[#141414]e flex flex-col text-center font-normal">زمان در یک روز برای ما محدود است، اما مهمترین کار این است که چگونه از آن استفاده می‌کنیم. با اپلیکیشن کوییرا لیست، زمان </span>
+            <span class="paragraph_text dark:text-white text-[#141414] flex flex-col text-center font-normal">خود را با هدف و برنامه‌ریزی موثر سپری کنید."</span>
+
+        </div>
+
+        <div class="header_bottom__pra_res py-8 flex flex-col items-center justify-evenly text-[16px] leading-[18.6px] hidden">
+
+            <span class="paragraph_text text-white flex flex-col text-center font-normal pb-2">زمان در یک روز برای ما محدود است، اما مهمترین کار این است</span>
+            <span class="paragraph_text text-white flex flex-col text-center font-normal pb-2">که چگونه از آن استفاده می‌کنیم. با اپلیکیشن کوییرا لیست،</span>
+            <span class="paragraph_text text-white flex flex-col text-center font-normal">زمان خود را با هدف و برنامه‌ریزی موثر سپری کنید."</span>
+
+        </div>
+
+        <div class="header_bottom__btn flex gap-4 rounded-lg pt-10 pb-16 pr-10 pl-10">
+
+            <button type="button"
+                    class="header2_btn__right rounded-lg py-2 px-[40px] gap-2 bg-[#3A86F8] w-[220px] h-12 text-center">
+
+                <a href="" class="text-white text-center font-normal  h-[25px] w-[119px] ">ورود به اپلیکیشن</a>
+            </button>
+
+            <button type="button"
+                    class="header_btn__left rounded-lg py-2 px-[40px] gap-2 dark:bg-[#122549] bg-[#EBF3FE] w-[180px] h-12 text-center">
+
+                <a href="about.html" class="dark:text-white text-[#2C7EF8] text-center font-normal  h-[25px] w-14">درباره
+                    ما</a>
+
+            </button>
+
+        </div>
+
+        <div class="header_bottom__btn__res  gap-4 rounded-lg pt-10 pb-16 pr-10 pl-10 hidden">
+
+            <div class="header2_btn__right rounded-lg gap-2 bg-[#3A86F8] w-[156px] h-[40px] text-center">
+                <a href="#" class="text-white font-normal">ورود به اپلیکیشن</a>
+            </div>
+
+            <div class="header_btn__left rounded-lg gap-2 bg-[#122549] w-[156px] h-[40px] text-center">
+                <a href="about.html" class="text-white font-normal">درباره ما</a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+</header>
+
+<!--creat main index page-->
+<main class="main_index">
+
+    <section class="main-base flex flex-col justify-center mx-auto my-0 px-[160px] gap-[124px]">
+
+        <section class="main_top flex justify-center items-center">
+
+            <img src="./images/d-main-top.svg" alt="img_top" class="main_top__img  hidden dark:block">
+            <img src="./images/main-light.svg" alt="img_top" class="main_top__img block dark:hidden">
+
+        </section>
+
+        <section class="main_property flex flex-col justify-center gap-6">
+
+            <div class="property-txt flex-col flex justify-center items-center gap-6">
+
+                <h2 class="property_title dark:text-white text-[#191C1E] font-semibold text-[40px] leading-[72px]">ویژگی‌های اپلیکیشن
+                    کوئرالیست</h2>
+                <p class="property_subtitle dark:text-[#E6E6E6] text-[#191C1E] font-normal text-lg leading-[30px]">ما توی تیم کوئرا لیست بر
+                    اساس بازخوردهای شما و جدیدترین
+                    ترندهای<br>بازار
+                    همواره در تلاشیم تا بهترین تجربه کاربری رو براتون به ارمغان بیاریم.</p>
+            </div>
+
+            <div class="property-boxes flex justify-center items-center gap-6 mx-auto my-0 ">
+
+                <div class="property_box1 flex flex-col items-center justify-evenly gap-2 rounded-3xl py-8 px-8 pt-4 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8]">
+                    <img src="./images/peo01.svg" alt="" class="box_img  hidden dark:block">
+                    <img src="./images/light-per01.svg" alt="" class="box_img block dark:hidden">
+                    <span class="pre_box__title dark:text-white text-[#191C1E] font-bold text-[16px]">رابط کاربری جذاب</span>
+                    <div class="flex-col flex items-center justify-between text-center">
+                        <p class="pre_box_subtitle dark:text-[#F0F0F0] text-[#444749] font-normal text-sm">اگه از سردرگمی و بی برنامگی خسته
+                            شدی این اپلیکیشن مخصوص خودته!</p>
+                    </div>
+                </div>
+
+                <div class="property_box2 flex flex-col items-center justify-evenly gap-2 rounded-3xl py-8 px-8 pt-4 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] ">
+                    <img src="./images/peo02.svg" alt="" class="box_img  hidden dark:block">
+                    <img src="./images/light-per02.svg" alt="" class="box_img block dark:hidden">
+                    <span class="pre_box__title dark:text-white text-[#191C1E] font-bold text-[16px]">قابلیت دسترسی</span>
+                    <div class="flex-col flex items-center justify-between text-center">
+                        <p class="pre_box_subtitle dark:text-[#F0F0F0] text-[#444749] font-normal text-sm">اگه از سردرگمی و بی برنامگی خسته
+                            شدی این اپلیکیشن مخصوص خودته!</p>
+                    </div>
+                </div>
+
+                <div class="property_box3 flex flex-col items-center justify-evenly gap-2 rounded-3xl py-8 px-8 pt-4 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] ">
+                    <img src="./images/peo03.svg" alt="" class="box_img  hidden dark:block">
+                    <img src="./images/light-per03.svg" alt="" class="box_img block dark:hidden">
+                    <span class="pre_box__title dark:text-white text-[#191C1E] font-bold text-[16px]">دسترسی آسان</span>
+                    <div class="flex-col flex items-center justify-between text-center">
+                        <p class="pre_box_subtitle dark:text-[#F0F0F0] text-[#444749] font-normal text-sm">اگه از سردرگمی و بی برنامگی خسته
+                            شدی این اپلیکیشن مخصوص خودته!</p>
+                    </div>
+                </div>
+
+                <div class="property_box1 flex flex-col items-center justify-evenly gap-2 rounded-3xl py-8 px-8 pt-4 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] ">
+                    <img src="./images/peo04.svg" alt="" class="box_img hidden dark:block">
+                    <img src="./images/light-per04.svg" alt="" class="box_img block dark:hidden">
+                    <span class="pre_box__title dark:text-white text-[#191C1E] font-bold text-[16px]">پشتیبانی آنلاین</span>
+                    <div class="flex-col flex items-center justify-between text-center">
+                        <p class="pre_box_subtitle dark:text-[#F0F0F0] text-[#444749] font-normal text-sm">اگه از سردرگمی و بی برنامگی خسته
+                            شدی این اپلیکیشن مخصوص خودته!</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="desktop_mod__download">
+
+            <section class="download__desktop flex justify-between items-center">
+
+                <div class="download_right flex flex-col gap-10">
+
+                    <div class="right_txt flex flex-col ">
+
+                        <h4 class="right_txt__title dark:text-white text-[#444749] font-normal text-lg leading-[30px]">اپلیکیشن اندروید و
+                            IOS</h4>
+                        <h2 class="right_txt__subtitle dark:text-white text-[#191C1E] font-bold text-[40px] leading-[72px]">دانلود
+                            اپلیکیشن</h2>
+
+                    </div>
+
+                    <div class="right_paragraph flex flex-col">
+
+                        <p class="paragraph__txt  dark:text-[#E6E6E6] text-[#444749] font-normal text-lg leading-[30px]" id="download">
+                            کاربران اندروید
+                            می‌توانند اپلیکیشن کوئرالیست را از استورهای
+                            <br>
+                            معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل <br>
+                            علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر<br>
+                            وب آن استفاده نمایند<br>
+                            همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از <br>
+                            پل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند</p>
+                    </div>
+
+                    <div class="right_link flex gap-3 items-center">
+
+                        <a href="#" class="right_link__logo flex items-center gap-1">
+                            <h4 class="right_link__txt font-bold text-lg text-[#2C7EF8] pb-1.5">ورود به اپلیکیشن</h4>
+                            <img src="./images/arrow-right.svg" alt="icon-arrow" class="right_link__img">
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="download_left">
+
+                        <img src="./images/d-down.svg" alt="download_img" class="left-item__img1  hidden dark:block">
+                        <img src="./images/dwonload_light.svg" alt="download_img" class="left-item__img1block dark:hidden ">
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="mobile_mod__download hidden">
+
+            <section class="download__mobile flex flex-col justify-between items-center">
+
+                <div class="download_top flex flex-col gap-2">
+
+                    <div class="top_txt flex flex-col justify-center items-center content-center">
+
+                        <h4 class="right_txt__title text-white font-normal text-[10px] leading-[15.5px] justify-center items-center content-center ">
+                            اپلیکیشن اندروید و
+                            IOS</h4>
+                        <h2 class="right_txt__subtitle text-white font-semibold text-[20px] leading-[72px] justify-center items-center content-center">
+                            دانلود
+                            اپلیکیشن</h2>
+
+                    </div>
+
+                    <div class="download_main flex flex-col justify-center items-center content-center ">
+
+                        <figure class="left-item">
+                            <img src="./images/dwonload_re.svg" alt="download_img" class="left-item__img2">
+                        </figure>
+
+                    </div>
+
+                    <div class="bottom_paragraph flex flex-col justify-center items-center content-center">
+
+                        <p class="paragraph__txt text-[#E6E6E6] font-normal text-[10px] leading-[30px] justify-center items-center content-center text-center">
+                            کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر اندروید <br>
+                            دانلود نمایند. همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از <br>
+                            اپل‌استور می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند. <br>
+                            همچنین کاربران سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور <br>
+                            می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند. <br>
+
+                        </p>
+
+                    </div>
+
+                    <div class="right_link flex gap-3 justify-center items-center content-center">
+
+                        <a href="#" class="right_link__logo flex items-center gap-1">
+                            <h4 class="right_link__txt font-bold text-[12px] text-[#2C7EF8] pb-1.5">ورود به
+                                اپلیکیشن</h4>
+                            <img src="./images/arrow-right.svg" alt="icon-arrow" class="right_link__img">
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <section class="comments flex flex-col ">
+
+            <div class="comments_top flex flex-col justify-center content-center gap-4 ">
+
+                <h3 class="comment_top__title dark:text-white text-[#191C1E]">نظرات کاربران</h3>
+
+                <h4 class="comment_top__subtitle dark:text-[#E6E6E6] text-[#444749]">بیش از یک دهه است که کوئرا لیست به مردم در سراسر جهان
+                    کمک <br> می‌کند
+                    تا سازماندهی شوند و به اهداف خود برسند.</h4>
+
+            </div>
+
+
+            <div class="comment_boxes">
+
+                <div class="profile-card item-grid1 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] rounded-2xl">
+                    <div class="flex_card">
+                        <figure class="img_profile">
+                            <img src="./images/person01.svg" alt="Profile-Picture1">
+                        </figure>
+                        <div class="comment-info">
+                            <h2 class="comment_info__name dark:text-white text-[#141414]">علی احمدی</h2>
+                            <p class="comment_info__title dark:text-[#E6E6E6] text-[#5C5C5C]">مهندس نرم‌افزار دیجی کالا</p>
+                        </div>
+                    </div>
+                    <p class="comment_info__txt dark:text-[#E6E6E6] text-[#444749]">تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از
+                        دنیایی اومدم
+                        که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این امکان رو می‌دهد که باهوش‌تر، سریع‌تر
+                        و سازمان دهی شده تر زندگی کنیم و هم چینین همه چیز به گونه‌ای ساده تنظیم شده و میتونیم از
+                        یکپارچگی اطلاعات و دیتاها لذت ببریم.</p>
+                </div>
+
+                <div class="profile-card item-grid2 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] rounded-2xl">
+                    <div class="flex_card">
+                        <figure class="img_profile">
+                            <img src="./images/person02.svg" alt="Profile Picture">
+                        </figure>
+                        <div class="comment-info">
+                            <h2 class="comment_info__name  dark:text-white text-[#141414]">رویا ملکی</h2>
+                            <p class="comment_info__title dark:text-[#E6E6E6] text-[#5C5C5C]">مهندس نرم‌افزار دیجی کالا</p>
+                        </div>
+                    </div>
+                    <p class="comment_info__txt dark:text-[#E6E6E6] text-[#444749]">تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از
+                        دنیایی اومدم
+                        که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این امکان رو می‌دهد که سریع تر باشیم.</p>
+                </div>
+
+                <div class="profile-card item-grid3 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] rounded-2xl">
+                    <div class="flex_card">
+                        <figure class="img_profile">
+                            <img src="./images/person03.svg" alt="Profile Picture">
+                        </figure>
+                        <div class="comment-info">
+                            <h2 class="comment_info__name  dark:text-white text-[#141414]">مریم امیری</h2>
+                            <p class="comment_info__title dark:text-[#E6E6E6] text-[#5C5C5C]">مهندس نرم‌افزار دیجی کالا</p>
+                        </div>
+                    </div>
+                    <p class="comment_info__txt dark:text-[#E6E6E6] text-[#444749]">تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از
+                        دنیایی اومدم
+                        که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این امکان رو می‌دهد که باهوش‌تر، سریع‌تر
+                        و سازمان دهی شده تر زندگی کنیم و هم چینین همه چیز به گونه‌ای ساده تنظیم شده و میتونیم از
+                        یکپارچگی اطلاعات و دیتاها لذت ببریم.</p>
+                </div>
+
+                <div class="profile-card item-grid4 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] rounded-2xl">
+                    <div class="flex_card">
+                        <figure class="img_profile">
+                            <img src="./images/person04.svg" alt="Profile Picture">
+                        </figure>
+                        <div class="comment-info">
+                            <h2 class="comment_info__name  dark:text-white text-[#141414]">رویا ملکی</h2>
+                            <p class="comment_info__title dark:text-[#E6E6E6] text-[#5C5C5C]">مهندس نرم‌افزار دیجی کالا</p>
+                        </div>
+                    </div>
+                    <p class="comment_info__txt dark:text-[#E6E6E6] text-[#444749]">تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از
+                        دنیایی اومدم
+                        که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این امکان رو می‌دهد که سریع تر باشیم</p>
+                </div>
+
+                <div class="profile-card item-grid5 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] rounded-2xl">
+                    <div class="flex_card">
+                        <figure class="img_profile">
+                            <img src="./images/person05.svg" alt="Profile Picture">
+                        </figure>
+                        <div class="comment-info">
+                            <h2 class="comment_info__name  dark:text-white text-[#141414]">سارا ابر</h2>
+                            <p class="comment_info__title dark:text-[#E6E6E6] text-[#5C5C5C]">مهندس نرl افزار دیجی‌کالا</p>
+                        </div>
+                    </div>
+                    <p class="comment_info__txt dark:text-[#E6E6E6] text-[#444749]">تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از
+                        دنیایی اومدم
+                        که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این امکان رو می‌دهد که باهوش‌تر، سریع‌تر
+                        و سازمان دهی شده تر زندگی کنیم و هم چینین همه چیز به گونه‌ای ساده تنظیم شده و میتونیم از
+                        یکپارچگی اطلاعات و دیتاها لذت ببریم.</p>
+                </div>
+
+                <div class="profile-card item-grid6 dark:bg-[#0B192D] border dark:border-[#0B192D] bg-white border-[#F5F6F8] rounded-2xl">
+                    <div class="flex_card">
+                        <figure class="img_profile">
+                            <img src="./images/person06.svg" alt="Profile Picture">
+                        </figure>
+                        <div class="comment-info">
+                            <h2 class="comment_info__name  dark:text-white text-[#141414]">ثنا مهدوی</h2>
+                            <p class="comment_info__title dark:text-[#E6E6E6] text-[#5C5C5C]">مهندس نرم‌افزار دیجی کالا</p>
+                        </div>
+                    </div>
+                    <p class="comment_info__txt dark:text-[#E6E6E6] text-[#444749]">تجربه من با کوئرا لیست زندگی من رو تغییر داده است. من از
+                        دنیایی اومدم
+                        که همه چیز من در اکسل بود. استفاده از کوئرا لیست به ما این امکان رو می‌دهد که سریع تر باشیم</p>
+                </div>
+
+            </div>
+
+            <div class="comment_bottom flex justify-center items-center gap-8 pt-4">
+
+                <button class="comment_bottom__right">
+                    <img src="./images/square%20Buttons-d-r.svg" alt="right-btn" class="comment_bottom_img hidden dark:block">
+                    <img src="./images/square%20Buttons-light.svg" alt="right-btn" class="comment_bottom_img block dark:hidden">
+                </button>
+
+                <button class="comment_bottom__left">
+                    <img src="./images/square%20Buttons-d-l.svg" alt="left-btn" class="comment_bottom_img hidden dark:block">
+                    <img src="./images/square%20Buttons02-light.svg" alt="left-btn" class="comment_bottom_img block dark:hidden">
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+
+<!--creat footer-->
+<footer class="footer flex flex-col gap-12 ">
+
+    <section class="footer-top flex justify-center items-center gap-3 pt-9">
+        <div class="dark:bg-[#E9E9E9] bg-[#AFAFAF] w-64 h-[1px]"></div>
+        <span class="dark:text-white text-[#141414] font-semibold text-base">کوئرا لیست</span>
+        <div class="dark:bg-[#E9E9E9] bg-[#AFAFAF] w-64 h-[1px]"></div>
+    </section>
+
+    <section class="footer-main flex justify-between py-0 px-40">
+
+        <div class="footer-main__right flex flex-col gap-6 dark:text-[#DFDFDF] text-[#242424]">
+
+            <div class="footer_item__right1_2 flex flex-col gap-4">
+
+                <div class="footer-item__right1 flex items-center gap-4">
+
+                    <img src="./images/fax-d.svg" alt="logo-fax" class="main-img__fax hidden dark:block">
+                    <img src="./images/fax-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+
+                    <span class="fax-txt">فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
+
+                </div>
+
+                <div class="footer-item__right2 flex items-center gap-4">
+
+                    <img src="./images/call-d-f.svg" alt="logo-phone" class="main-img__phone hidden dark:block">
+                    <img src="./images/call-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+
+                    <span class="phone-txt">تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
+                </div>
+
+            </div>
+
+            <div class="footer-item__right3 flex items-center gap-4">
+
+                <img src="./images/location-d.svg" alt="logo-loc" class="main-img__loc hidden dark:block">
+                <img src="./images/location-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+
+                <span class="loc-txt">آدرس دفتر مرکزی: پونک - خیابان اشرفی <br> اصفهانی - خیابان صبحدل- بن‌بست شب بو</span>
+
+            </div>
+
+        </div>
+
+        <div class="footer-main__left flex flex-col gap-8 dark:text-[#DFDFDF] text-[#242424]">
+
+            <h4 class="footer-main__txt font-bold text-base">با ما در ارتباط باش</h4>
+            <p class="footer-main__pra font-normal text-base">اگه میخوای اولین نفری باشی که از فیچرهای جدید <br>و
+                تخفیفات با خبر بشی.</p>
+
+            <div class="footer-email flex justify-between items-center border border-[#A1A1A1] rounded-lg w-84 h-12 dark:bg-[#040810] bg-white">
+
+                <label>
+                    <input type="email" placeholder="ایمیل"
+                           class="footer_email__input border-[#A1A1A1] dark:bg-[#040810] bg-white pr-4 outline-none border-none ">
+                </label>
+
+                <button class="send_email__btn flex justify-center items-center outline-none border-none">
+                    <img src="./images/send.svg" alt="icon_send" class="pl-2">
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer-bottom flex justify-center pb-4">
+        <div class="copyright">
+            <p class="copyright__text dark:text-[#DFDFDF] text-[#666666] font-normal text-sm">تمامی حقوق مادی و معنوی
+                این سایت متعلق به
+                کوئرا لیست
+                می‌باشد.</p>
+        </div>
+    </section>
+
+</footer>
+
+<script src="./scripts/app.js"></script>
+
+</body>
+
+</html>

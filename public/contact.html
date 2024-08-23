@@ -1,0 +1,446 @@
+<!doctype html>
+
+<html lang="fa-IR" dir="rtl" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO_DO Landing</title>
+    <link rel="icon" type="image/x-icon" href="https://icongr.am/devicon/slack-original.svg?size=54&color=currentColor">
+
+    <link rel="stylesheet" href="./styles/app.css">
+
+    <script type="text/javascript">
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+    </script>
+
+</head>
+
+<body class="dark:bg-[#040810] bg-white">
+
+<!--creat header-->
+<header class="header">
+
+    <section class="header_top flex justify-between items-center py-8 px-16">
+
+        <nav class="navbar flex items-center gap-10">
+
+            <h2 class="nav_logo__txt font-semibold dark:text-white text-[#141414] text-[20px] leading-[30px]">کوئرا
+                لیست</h2>
+
+            <ul class="menu_X  text-base font-semibold flex items-center gap-10">
+                <li class="menu__item dark:text-[#CFCFCF] text-[#666666]">
+                    <a href="index.html" class="menu__link">صفحه اصلی</a>
+                </li>
+                <li class="menu__item dark:text-[#CFCFCF] text-[#666666]">
+                    <a href="about.html" class="menu__link">درباره ما</a>
+                </li>
+                <li class="menu__item dark:text-[#3A86F8] text-[#2C7EF8]">
+                    <a href="#" class="menu__link">ارتباط با ما</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="h_icon w-6 h-6 cursor-pointer hidden" onclick="toggleMenu()">
+
+            <div class="hamburger_menu w-full hidden">☰</div>
+
+            <div class="">
+
+                <ul class="H-menu text-[12px] font-normal items-center py-4 px-4 pl-16  mt-2 ">
+
+                    <li class="py-1 text-center">
+                        <a href="index.html" class="block">صفحه اصلی</a>
+                    </li>
+
+                    <div class="line h-px w-14 bg-[#293242] mx-auto">
+
+                    </div>
+
+                    <li class="py-1 text-center">
+                        <a href="about.html" class="block">درباره ما</a>
+                    </li>
+
+                    <div class="line h-px w-14 bg-[#293242] mx-auto">
+
+                    </div>
+
+                    <li class="py-1 text-center text-blue-500">
+                        <a href="#" class="block">ارتباط باما</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="header_left flex items-center gap-4">
+
+            <div class="header_btn__right rounded-md py-2 px-6 gap-2 bg-[#3A86F8] w-[167px] h-10 text-center">
+                <a href="#" class="text-white text-center font-semibold text-[16px] w-[119px] h-2.5">ورود به
+                    اپلیکیشن</a>
+            </div>
+
+            <div class="mode_them cursor-pointer" id="toggle-theme">
+                <img src="./images/d-btn-header.svg" alt="" class="mode-logo__imag block dark:hidden">
+                <img src="./images/sunmood.svg" alt="" class="mode-logo__imag  hidden dark:block">
+            </div>
+
+        </div>
+
+    </section>
+
+</header>
+
+<!--creat main contact us-->
+
+<main class="contact_desktop flex justify-evenly gap-6 py py-10 px-8 my-0 mx-auto">
+
+    <section class="contents-contact flex dark:bg-[#0B192D] bg-white border dark:border-[#0B192D] border-[#F5F6F8] rounded-[2.5rem_2rem] w-[66.875rem] h-[42.875rem] ">
+
+        <div class="contact_right flex flex-col justify-between">
+
+            <div class="contact-right__top flex flex-col gap-6 py-8 px-6 w-[470px] h-[316px]">
+
+                <div class="contact_right__top1 flex-col flex gap-6">
+                    <h3 class="title-contact__top1 font-bold dark:text-[#E6E6E6] text-[#070D31] text-[40px]">تماس با‌ من</h3>
+                    <p class="subtitle-contact__top1 font-normal text-xl dark:text-[#DFDFDF] text-[#6F7076]">چیزی هست که بخوای ازم بپرسی؟
+                        خوشحال میشم بتونم بهت کمکی کنم.</p>
+                </div>
+
+                <div class="contact_right__top2 flex-col flex gap-6">
+
+                    <div class="contact_top2__item1 flex items-center gap-4 dark:text-[#E6E6E6] text-[#6F7076]">
+
+                            <img src="./images/call-d-con.svg" alt="call-img" class="contact_img_phone hidden dark:block">
+                            <img src="./images/call-0-light.svg" alt="call-img" class="contact_img_phone block dark:hidden">
+
+                        <span class="contact_phone__txt ">7654321 0921</span>
+                    </div>
+
+                    <div class="contact_top2__item2 flex items-center gap-4 dark:text-[#E6E6E6] text-[#6F7076]">
+
+                            <img src="./images/sms-d-con.svg" alt="sms-img" class="contact_img_mail hidden dark:block">
+                            <img src="./images/sms-light.svg" alt="sms-img" class="contact_img_mail block dark:hidden">
+
+                        <span class="contact_phone__mail">QueraList@gmail.com</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="contact-right__bottom flex pt-0 pr-6 pl-6 pb-[100px]">
+
+                <div class="contact-link flex gap-8">
+
+                    <a href="https://github.com" class="git pt-[280px]" target="_blank">
+
+                            <img src="./images/github-d.svg" alt="git_icon" class="git_icon__img hidden dark:block">
+                            <img src="./images/mark-github-light.svg" alt="git_icon" class="git_icon__img block dark:hidden">
+                    </a>
+
+                    <a href="https://twitter.com" class="twitter pt-[280px]" target="_blank">
+
+                            <img src="./images/twitter-d.svg" alt="twitter_icon" class="twitter_icon__img hidden dark:block">
+                            <img src="./images/twitter-1.svg" alt="twitter_icon" class="twitter_icon__img block dark:hidden">
+                    </a>
+
+                    <a href="https://linkedin.com" class="linkedin pt-[280px]" target="_blank">
+
+                            <img src="./images/linkedin-d.svg" alt="" class="linkedin_icon__img hidden dark:block">
+                            <img src="./images/linkedin.svg" alt="" class="linkedin_icon__img block dark:hidden">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="contact_mid flex justify-between items-center">
+
+            <div class="dark:bg-[#293242] bg-[#E0E0E0] h-[606px] w-[1px]"></div>
+
+        </div>
+
+        <div class="contact_left flex flex-col justify-between py-8 px-6">
+
+            <form action="" class="content-form flex flex-col justify-between">
+
+                <div class="form__part1 flex justify-between items-center">
+
+                    <div class="form_part__name">
+                        <label for="name" class="form_name font-semibold text-base block dark:text-white text-[#070D31] pb-3.5">نام:</label>
+                        <input type="text"
+                               class="input_name w-[223px] h-[56px] p-2 rounded-md border dark:border-[#293242] border-[#E6E6E6] dark:bg-[#0B192D] bg-white"
+                               placeholder="نام شما" id="name">
+                    </div>
+
+                    <div class="form_part__lastname">
+                        <label for="last-name" class="form_name font-semibold text-base block dark:text-white text-[#070D31] pb-3.5">نام
+                            خانوادگی:</label>
+                        <input type="text"
+                               class="input_lastname w-[223px] h-[56px] p-2 rounded-md border dark:border-[#293242] border-[#E6E6E6] dark:bg-[#0B192D] bg-white"
+                               placeholder="نام خانوادگی شما" id="last-name">
+
+                    </div>
+
+                </div>
+
+                <div class="form__part2 flex flex-col justify-between pt-4">
+                    <label for="email" class="form_email font-semibold text-base block dark:text-white text-[#070D31] pb-3.5">ایمیل:</label>
+                    <input type="email"
+                           class="input_email__contact p-2 rounded-md border dark:border-[#293242] border-[#E6E6E6] dark:bg-[#0B192D] bg-white h-[56px] w-[471px] "
+                           placeholder="ایمیل" id="email">
+                </div>
+
+                <div class="form__part3 flex flex-col justify-between pt-4">
+                    <label for="phone" class="form_phone font-semibold text-base block dark:text-white text-[#070D31] pb-3.5">شماره
+                        تماس:</label>
+                    <input type="tel"
+                           class="input_phone p-2 rounded-md border dark:border-[#293242] border-[#E6E6E6] dark:bg-[#0B192D] bg-white h-[56px] w-[471px]"
+                           placeholder="شماره تماس شما" id="phone" dir="rtl">
+                </div>
+
+                <div class="form__part4 flex flex-col justify-between pt-4">
+                    <label for="txt" class="form_txt font-semibold text-base block dark:text-white text-[#070D31] pb-3.5">متن:</label>
+                    <textarea name="" id="txt" cols="30" rows="10"
+                              class="input_txt p-2 rounded-md border dark:border-[#293242] border-[#E6E6E6] dark:bg-[#0B192D] bg-white h-[136px] w-[471px]"
+                              placeholder="متن پیام شما"></textarea>
+                </div>
+
+                <div class="form__part5 flex flex-col justify-between pt-4">
+                    <button type="submit" class="form_btn__email">
+                        <img src="./images/sendMassage.svg" alt="send_form">
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+<main class="contact__mobile hidden ">
+
+    <section class="contents_mobile flex flex-col justify-center items-center mx-auto my-0 ">
+
+        <div class="header_txt flex flex-col justify-center items-center gap-2.5">
+
+            <h2 class="title_txt text-white font-bold text-[24px] text-center leading-[43px]">تماس با ما</h2>
+
+            <p class="subtitle__txt pb-4 text-white font-normal text-[14px] text-center leading-[25px]">چیزی هست که
+                بخوای ازم بپرسی؟ خوشحال میشم بتونم بهت کمکی کنم.</p>
+
+        </div>
+
+        <div class="contact__form flex flex-col justify-center items-center gap-6 p-4 rounded-2xl border border-[#0B192D] bg-[#0B192D]">
+
+            <form action="" class="content-form flex flex-col justify-between">
+
+                <div class="form__part1 flex justify-between items-center">
+
+                    <div class="form_part__name">
+                        <label for="name_res"
+                               class="form_name font-semibold text-[12px] block text-white pb-3.5">نام:</label>
+                        <input type="text"
+                               class="input_name w-[223px] h-[56px] p-2 rounded-md border border-[#293242] bg-[#0B192D] "
+                               placeholder="نام شما" id="name_res">
+                    </div>
+
+                    <div class="form_part__lastname">
+                        <label for="last-name__res" class="form_name font-semibold text-[12px] block text-white pb-3.5">نام
+                            خانوادگی:</label>
+                        <input type="text"
+                               class="input_lastname w-[223px] h-[56px] p-2 rounded-md border border-[#293242] bg-[#0B192D] "
+                               placeholder="نام خانوادگی شما" id="last-name__res">
+
+                    </div>
+
+                </div>
+
+                <div class="form__part2 flex flex-col justify-between pt-4">
+                    <label for="email_res"
+                           class="form_email font-semibold text-[12px] block text-white pb-3.5">ایمیل:</label>
+                    <input type="email"
+                           class="input_email__contact p-2 rounded-md border border-[#293242] bg-[#0B192D] h-[56px] w-[471px] "
+                           placeholder="ایمیل" id="email_res">
+                </div>
+
+                <div class="form__part3 flex flex-col justify-between pt-4">
+                    <label for="phone_res" class="form_phone font-semibold text-[12px] block text-white pb-3.5">شماره
+                        تماس:</label>
+                    <input type="tel"
+                           class="input_phone p-2 rounded-md border border-[#293242] bg-[#0B192D] h-[56px] w-[471px]"
+                           placeholder="شماره تماس شما" id="phone_res" dir="rtl">
+                </div>
+
+                <div class="form__part4 flex flex-col justify-between pt-4">
+                    <label for="txt_res" class="form_txt font-semibold text-[12px] block text-white pb-3.5">متن:</label>
+                    <textarea name="" id="txt_res" cols="30" rows="10"
+                              class="input_txt p-2 rounded-md border border-[#293242] h-[136px] w-[471px] bg-[#0B192D]"
+                              placeholder="متن پیام شما"></textarea>
+                </div>
+
+                <div class="form__part5 flex flex-col justify-between pt-4">
+                    <button type="submit" class="form_btn__email">
+                        <img src="./images/sendMassage.svg" alt="send_form">
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="bottom1 flex justify-between pt-4 pb-4 gap-4">
+
+            <div class="contact_top2__item1 flex items-center  text-[#E6E6E6] gap-2 rounded-[12px] py-3 px-8 border-[#0B192D] border bg-[#0B192D]">
+                <figure class="contact_img rounded-full border border-white bg-white p-2">
+                    <img src="./images/call-d-res.svg" alt="call-img" class="contact_img_phone">
+                </figure>
+                <span class="contact_phone__mail text-center text-[10px] font-bold">تلفن :</span>
+                <br>
+                <span class="contact_phone__txt text-center text-[10px] font-bold">7654321 0912</span>
+            </div>
+
+            <div class="contact_top2__item2 flex items-center  text-[#E6E6E6] gap-2 rounded-[12px] py-3 px-8 border-[#0B192D] border bg-[#0B192D]">
+                <figure class="contact_img rounded-full border border-white bg-white p-2">
+                    <img src="./images/sms-d-res.svg" alt="sms-img" class="contact_img_mail">
+                </figure>
+                <span class="contact_phone__mail text-center text-[10px] font-bold">ایمیل :</span>
+                <br>
+                <span class="contact_phone__mail text-center text-[10px] font-bold">QueraList@gmail.com</span>
+            </div>
+
+        </div>
+
+        <div class="bottom2 flex gap-8 justify-center items-center px-3 w-full">
+
+            <div class="contact-link flex gap-8 justify-center items-center rounded-[12px] border border-[#0B192D] bg-[#0B192D] px-40 py-2">
+
+                <a href="https://github.com" class="git" target="_blank">
+                    <figure class="git_icon">
+                        <img src="./images/git-d-res.svg" alt="git_icon" class="git_icon__img">
+                    </figure>
+                </a>
+
+                <a href="https://twitter.com" class="twitter" target="_blank">
+                    <figure class="twitter_icon">
+                        <img src="./images/tiw-d-res.svg" alt="twitter_icon" class="twitter_icon__img">
+                    </figure>
+                </a>
+
+                <a href="https://linkedin.com" class="linkedin" target="_blank">
+                    <figure class="linkedin_icon">
+                        <img src="./images/linkrdin-d-re.svg" alt="" class="linkedin_icon__img">
+                    </figure>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!--creat footer-->
+
+<footer class="footer flex flex-col gap-12 ">
+
+    <section class="footer-top flex justify-center items-center gap-3 pt-9">
+        <div class="dark:bg-[#E9E9E9] bg-[#AFAFAF] w-64 h-[1px]"></div>
+        <span class="dark:text-white text-[#141414] font-semibold text-base">کوئرا لیست</span>
+        <div class="dark:bg-[#E9E9E9] bg-[#AFAFAF] w-64 h-[1px]"></div>
+    </section>
+
+    <section class="footer-main flex justify-between py-0 px-40">
+
+        <div class="footer-main__right flex flex-col gap-6 dark:text-[#DFDFDF] text-[#242424]">
+
+            <div class="footer_item__right1_2 flex flex-col gap-4">
+
+                <div class="footer-item__right1 flex items-center gap-4">
+
+                    <img src="./images/fax-d.svg" alt="logo-fax" class="main-img__fax hidden dark:block">
+                    <img src="./images/fax-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+                    <img src="./images/facx-r.svg" alt="logo-fax" class="main-img__fax__res hidden">
+
+                    <span class="fax-txt">فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
+
+                </div>
+
+                <div class="footer-item__right2 flex items-center gap-4">
+
+                    <img src="./images/call-d-f.svg" alt="logo-phone" class="main-img__phone hidden dark:block">
+                    <img src="./images/call-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+                    <img src="./images/call-r.svg" alt="logo-phone" class="main-img__phone__res hidden">
+
+                    <span class="phone-txt">تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</span>
+                </div>
+
+            </div>
+
+            <div class="footer-item__right3 flex items-center gap-4">
+
+                <img src="./images/location-d.svg" alt="logo-loc" class="main-img__loc hidden dark:block">
+                <img src="./images/location-light.svg" alt="logo-fax" class="main-img__fax block dark:hidden">
+
+                <span class="loc-txt">آدرس دفتر مرکزی: پونک - خیابان اشرفی <br> اصفهانی - خیابان صبحدل- بن‌بست شب بو</span>
+
+            </div>
+
+        </div>
+
+        <div class="footer-main__left flex flex-col gap-8 dark:text-[#DFDFDF] text-[#242424]">
+
+            <h4 class="footer-main__txt font-bold text-base">با ما در ارتباط باش</h4>
+            <p class="footer-main__pra font-normal text-base">اگه میخوای اولین نفری باشی که از فیچرهای جدید <br>و
+                تخفیفات با خبر بشی.</p>
+
+            <div class="footer-email flex justify-between items-center border border-[#A1A1A1] rounded-lg w-84 h-12 dark:bg-[#040810] bg-white">
+
+                <label>
+                    <input type="email" placeholder="ایمیل"
+                           class="footer_email__input border-[#A1A1A1] dark:bg-[#040810] bg-white pr-4 outline-none border-none ">
+                </label>
+
+                <button class="send_email__btn flex justify-center items-center outline-none border-none">
+                    <img src="./images/send.svg" alt="icon_send" class="pl-2">
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="footer-bottom flex justify-center pb-4">
+        <div class="copyright">
+            <p class="copyright__text dark:text-[#DFDFDF] text-[#666666] font-normal text-sm">تمامی حقوق مادی و معنوی
+                این سایت متعلق به
+                کوئرا لیست
+                می‌باشد.</p>
+        </div>
+    </section>
+
+</footer>
+
+<script src="./scripts/app.js"></script>
+
+</body>
+
+</html>
