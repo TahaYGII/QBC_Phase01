@@ -817,10 +817,6 @@ template {
   height: 316px;
 }
 
-.h-\[350px\] {
-  height: 350px;
-}
-
 .h-\[392px\] {
   height: 392px;
 }
@@ -2200,5 +2196,6 @@ template {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
 
 
